@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# base styling, can remove this after we have one style sheet in folder.
+./src/css/temp.css
