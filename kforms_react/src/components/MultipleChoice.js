@@ -21,10 +21,8 @@ class MultipleChoice extends Component {
 
     handleSubmitQuestion = (event) => {
         event.preventDefault();
-        console.log('Question was submitted.');
-        console.log(event.target);
         this.setState({
-            userQuestion: event.target.input
+            userQuestion: event.target.elements[0].value
         })
     }
 
