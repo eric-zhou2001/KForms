@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 
 class Textbox extends Component {
@@ -13,7 +12,7 @@ class Textbox extends Component {
     /**
      * Basic event handler function that updates the content variable in the
      * state for easy access.
-     * @param { Syntheticevent } event - default Synthetic Event passed into
+     * @param { SyntheticEvent } event - default Synthetic Event passed into
      * onChange function.
      */
     saveContent = (event) => {
