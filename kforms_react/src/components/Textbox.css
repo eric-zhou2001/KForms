@@ -1,0 +1,27 @@
+/** import this later into style folder. **/
+@import url("https://fonts.googleapis.com/css2?family=Castoro&display=swap");
+
+* {
+    font-family: Castoro;
+}
+
+.center-container {
+    display:flex;
+    justify-content: center;
+}
+
+.textbox-label, 
+.textbox,
+.textbox-question {
+    display:block;
+}
+
+.textbox-question {
+    width: 500px;
+}
+
+.textbox {
+    margin-top: 5px;
+    width: 500px;
+    height: 100px;
+}
