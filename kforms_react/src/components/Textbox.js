@@ -57,12 +57,6 @@ class Textbox extends Component {
                         onChange = {this.saveContent}
                         placeholder={"Please enter a description..."}
                     ></textarea>
-                    <button 
-                        class={"submitBtn"} 
-                        type={"submit"}
-                    >
-                        Submit
-                    </button>
                 </form>
             </div>
         );
@@ -70,3 +64,7 @@ class Textbox extends Component {
 }
  
 export default Textbox;
+
+/**
+ * Figure out how to delete these things, how to deal with id changes?
+ */
