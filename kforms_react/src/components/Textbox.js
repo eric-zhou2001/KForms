@@ -55,8 +55,14 @@ class Textbox extends Component {
                         name={"textBox_" + this.state.id}
                         value={this.state.content}
                         onChange = {this.saveContent}
-                        placeholder={"Please enter some text..."}
+                        placeholder={"Please enter a description..."}
                     ></textarea>
+                    <button 
+                        class={"submitBtn"} 
+                        type={"submit"}
+                    >
+                        Submit
+                    </button>
                 </form>
             </div>
         );

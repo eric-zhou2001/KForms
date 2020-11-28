@@ -8,6 +8,17 @@
 .center-container {
     display:flex;
     justify-content: center;
+    margin-left:300px;
+    margin-right: 300px;
+    margin:0 300px 0 300px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+    background-color:#F5F5F5;
+}
+
+.submitBtn {
+    margin-top:10px;
 }
 
 .textbox-label, 
