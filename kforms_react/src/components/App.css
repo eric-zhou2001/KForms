@@ -2,8 +2,25 @@ button {
     width: 100px;
     height: 50px;
     font-size: 10px;
+    background-color: white;
+    border-width: .5px;
+    transition: 0.5s;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+    background-color:#F5F5F5;
 }
 
 button:hover {
-    cursor:pointer;
+    cursor: pointer;
+    background-color: #F5F5F5;
+}
+
+.componentBtns {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+#finishBtn {
+    display: none;
 }

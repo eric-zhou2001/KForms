@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import "./Textbox.css";
+import { Icon,InlineIcon } from '@iconify/react';
+import iosRemoveCircle from '@iconify-icons/ion/ios-remove-circle';
 
 class Textbox extends Component {
     constructor(props) {
@@ -33,6 +35,7 @@ class Textbox extends Component {
     render = () => { 
         return (
             <div className={"center-container"}>
+                <img></img>
                 <form className={"textbox-form"}>
                     <label 
                         htmlFor={"textBox_" + this.state.id}
