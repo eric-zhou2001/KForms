@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "./Textbox.css";
-import { Icon,InlineIcon } from '@iconify/react';
+import { Icon, InlineIcon } from '@iconify/react';
 import iosRemoveCircle from '@iconify-icons/ion/ios-remove-circle';
+
 
 class Textbox extends Component {
     constructor(props) {
@@ -9,7 +10,19 @@ class Textbox extends Component {
         this.state = {
             id: props.id,
             question: "",
-            content: ""
+            content: "",
+            displayDel: props.showDel
+        }
+    }
+
+    /**
+     * Updates the state with the new props (showDel).
+     * @param {*} props 
+     * @param {*} state 
+     */
+    static getDerivedStateFromProps(props, state) {
+        return {
+            displayDel: props.showDel
         }
     }
 
@@ -33,9 +46,15 @@ class Textbox extends Component {
     }
     
     render = () => { 
+        var removeButton;
+        if (this.state.displayDel) {
+            removeButton = <Icon className="removeIcon" icon={iosRemoveCircle} />;
+        } else {
+            removeButton = "";
+        }
         return (
             <div className={"center-container"}>
-                <img></img>
+                {removeButton}
                 <form className={"textbox-form"}>
                     <label 
                         htmlFor={"textBox_" + this.state.id}
@@ -67,7 +86,3 @@ class Textbox extends Component {
 }
  
 export default Textbox;
-
-/**
- * Figure out how to delete these things, how to deal with id changes?
- */

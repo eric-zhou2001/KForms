@@ -7,7 +7,8 @@ class App extends Component {
         super(props);
         this.state = {
             counter: 0,
-            components: []
+            components: [],
+            showDel: false
         }
     }
 
@@ -15,15 +16,16 @@ class App extends Component {
         this.setState({
             counter: ++this.state.counter,
             components: this.state.components.concat(
-                <Textbox id={this.state} />
+                {
+                    id: this.state.counter
+                }
             )
         });
     }
 
-    delete() {
+    delete = () => {
         var finishBtn = document.getElementById("finishBtn");
         var delBtn = document.getElementById("delBtn");
-        // Why is display none  ""????
 
         // Set button visibilities.
         if (finishBtn.style.display === "" || finishBtn.style.display ==="none") {
@@ -33,10 +35,14 @@ class App extends Component {
 
         // Allow users to select delete.
         
-        // First, display "x" on the component.
+        // First, display "x" on the component. We update state first, which is then passed down
+        // to the children.
+        this.setState({
+            showDel: true
+        })
     }
 
-    finishDel() {
+    finishDel = () => {
         var finishBtn = document.getElementById("finishBtn");
         var delBtn = document.getElementById("delBtn");
         // Why is display none  "" when page is initialized?
@@ -46,12 +52,18 @@ class App extends Component {
             delBtn.style.display = "block";
             finishBtn.style.display = "none";
         }
+
+        this.setState({
+            showDel:false,
+        })
     }
 
     render() {
         return (
         <div className={"App"}>
-            {this.state.components}
+            {this.state.components.map((object) => {
+                return <Textbox id={object.id} showDel={this.state.showDel} />
+            })}
             <div className="componentBtns">
                 <button 
                     className="addCmptBtn addTextbox"
